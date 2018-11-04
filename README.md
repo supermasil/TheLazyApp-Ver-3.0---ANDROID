@@ -1,6 +1,6 @@
 # Automate-Chill
 
-[![IMAGE ALT TEXT HERE](./logo.PNG)]
+[![IMAGE ALT TEXT HERE](./logo.PNG)](https://www.youtube.com/watch?v=4lqnoykI7rk&feature=youtu.be)
 The Lazy App (as in Lazy Evaluation, just nerdy stuff).
 
 We are Jessie Gross and Khoa Hoang from team Automate & Chill.
@@ -22,5 +22,5 @@ We have always dreamt of building applications benefiting the community and if t
 Finally, we would like to give shoutouts to Eric, Evans and Joseph and others from UIPath for helping us the entire time through many difficult challenges and we also would like to thank Calhacks5.0 team for organizing such an amazing hackathon.
 
 [![IMAGE ALT TEXT HERE](./screenshot1.PNG)](https://www.youtube.com/watch?v=4lqnoykI7rk&feature=youtu.be)
-[![IMAGE ALT TEXT HERE](./screenshot2.PNG)]
+[![IMAGE ALT TEXT HERE](./screenshot2.PNG)](https://www.youtube.com/watch?v=4lqnoykI7rk&feature=youtu.be)
 
