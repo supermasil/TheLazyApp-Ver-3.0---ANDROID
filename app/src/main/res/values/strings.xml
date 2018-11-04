@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Automate&amp;Chill</string>
+    <string name="CS61A">CS61A</string>
+    <string name="CS61B">CS61B</string>
+    <string name="CS70">CS70</string>
+    <string name="title">The Lazy App</string>
+    <string name="slogan">The laziness at your fingertip</string>
+    <string name="Email">Please enter your email...</string>
+</resources>
