@@ -1,5 +1,6 @@
 # Automate-Chill
 
+[![IMAGE ALT TEXT HERE](./logo.PNG)]
 The Lazy App (as in Lazy Evaluation, just nerdy stuff).
 
 We are Jessie Gross and Khoa Hoang from team Automate & Chill.
@@ -8,7 +9,7 @@ Our app eases the pain of downloading all the files from class websites as the s
 
 The app utilizes UIPathStudio and, UIPathAPI to let the bots automate the tasks. The file will be zipped and sent to Google Drive and the share link will then be sent back to the user's email.
 
-We are planning on expanding the app to fetch all the classes at Berkeley and letting people download the categorized essential files with just one click, sending notification everytime the websites are updated, update only new files and other features. We basically can integrate any things that require just one click away as the slogan of the app is "The laziness at your fingertip"
+We are planning on expanding the app to fetch all the classes at Berkeley and letting people download the categorized essential files with just one click, sending notification everytime the websites are updated, update only new files and other features. We basically can integrate any things that require just one click away as the slogan of the app is "The laziness at your fingertip".
 
 Story behind the app:
 
@@ -21,3 +22,5 @@ We have always dreamt of building applications benefiting the community and if t
 Finally, we would like to give shoutouts to Eric, Evans and Joseph and others from UIPath for helping us the entire time through many difficult challenges and we also would like to thank Calhacks5.0 team for organizing such an amazing hackathon.
 
 [![IMAGE ALT TEXT HERE](./screenshot1.PNG)](https://www.youtube.com/watch?v=4lqnoykI7rk&feature=youtu.be)
+[![IMAGE ALT TEXT HERE](./screenshot2.PNG)]
+
