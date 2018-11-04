@@ -1,6 +1,6 @@
 # Automate-Chill
 
-[![IMAGE ALT TEXT HERE](./logo.PNG)](https://www.youtube.com/watch?v=4lqnoykI7rk&feature=youtu.be)
+[![IMAGE ALT TEXT HERE](./logo.png)]
 The Lazy App (as in Lazy Evaluation, just nerdy stuff).
 
 We are Jessie Gross and Khoa Hoang from team Automate & Chill.
