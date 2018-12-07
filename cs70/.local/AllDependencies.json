@@ -1660,15 +1660,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\khoah\\.nuget\\packages\\": {}
+    "C:\\Users\\nowis\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "cs70",
       "projectName": "cs70",
-      "projectPath": "D:\\OneDrive\\BERKELEY\\Projects\\Automate-Chill\\CS70\\.local",
-      "packagesPath": "C:\\Users\\khoah\\.nuget\\packages\\",
-      "outputPath": "D:\\OneDrive\\BERKELEY\\Projects\\Automate-Chill\\CS70\\.local"
+      "projectPath": "C:\\Users\\nowis\\OneDrive\\Desktop\\newLazyApp\\Automate-Chill\\cs70\\.local",
+      "packagesPath": "C:\\Users\\nowis\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nowis\\OneDrive\\Desktop\\newLazyApp\\Automate-Chill\\cs70\\.local"
     },
     "frameworks": {
       "net461": {

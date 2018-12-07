@@ -82,218 +82,220 @@
       <Variable x:TypeArguments="x:String" Default="http://inst.eecs.berkeley.edu/~cs61b/fa18/" Name="classURL2" />
     </Flowchart.Variables>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID4</x:Reference>
-    </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_5">
-      <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open Browser" Hidden="False" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="[classURL]">
-        <ui:OpenBrowser.Body>
-          <ActivityAction x:TypeArguments="x:Object">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-            </ActivityAction.Argument>
-            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6">
-              <Sequence DisplayName="Data Scraping" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                <Sequence.Variables>
-                  <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
-                </Sequence.Variables>
-                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'CS61A'" sap2010:WorkflowViewState.IdRef="BrowserScope_1" Selector="&lt;html title='CS 61A *' /&gt;">
-                  <ui:BrowserScope.Body>
-                    <ActivityAction x:TypeArguments="x:Object">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                      </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                        <ui:ExtractData NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data 'TBODY'" ExtractMetadata="&lt;extract&gt;&lt;column attr='href' name='URL' exact='1'&gt;&lt;webctrl tag='tr' class='odd' /&gt;&lt;webctrl tag='td' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="100">
-                          <ui:ExtractData.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;webctrl parentid='calendar' tag='TBODY' /&gt;" WaitForReady="COMPLETE" />
-                          </ui:ExtractData.Target>
-                        </ui:ExtractData>
-                        <ui:WriteCsvFile Encoding="{x:Null}" AddHeaders="True" DataTable="[ExtractDataTable]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Schedule.csv" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" />
-                        <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
-                      </Sequence>
-                    </ActivityAction>
-                  </ui:BrowserScope.Body>
-                </ui:BrowserScope>
-              </Sequence>
-            </Sequence>
-          </ActivityAction>
-        </ui:OpenBrowser.Body>
-      </ui:OpenBrowser>
-      <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_4">
-          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="Schedule.csv">
-            <ui:ExcelApplicationScope.Body>
-              <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_10">
+      <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_5">
+        <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open Browser" Hidden="False" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="[classURL]">
+          <ui:OpenBrowser.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+              </ActivityAction.Argument>
+              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Data Scraping" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <Sequence.Variables>
-                    <Variable x:TypeArguments="sd:DataTable" Name="DT1" />
-                    <Variable x:TypeArguments="sd:DataTable" Name="DT2" />
+                    <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
                   </Sequence.Variables>
-                  <ui:ExcelReadRange AddHeaders="True" DataTable="[DT1]" DisplayName="Read Range" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="Schedule">
-                    <ui:ExcelReadRange.Range>
-                      <InArgument x:TypeArguments="x:String">
-                        <Literal x:TypeArguments="x:String" Value="" />
-                      </InArgument>
-                    </ui:ExcelReadRange.Range>
-                  </ui:ExcelReadRange>
-                  <ui:FilterDataTable DataTable="[DT1]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[DT2]" SelectColumnsMode="Keep">
-                    <ui:FilterDataTable.Filters>
-                      <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                        <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
-                          <ui:FilterOperationArgument.Column>
-                            <InArgument x:TypeArguments="x:String">["URL"]</InArgument>
-                          </ui:FilterOperationArgument.Column>
-                          <ui:FilterOperationArgument.Operand>
-                            <InArgument x:TypeArguments="x:String">["pdf"]</InArgument>
-                          </ui:FilterOperationArgument.Operand>
-                        </ui:FilterOperationArgument>
-                      </scg:List>
-                    </ui:FilterDataTable.Filters>
-                    <ui:FilterDataTable.SelectColumns>
-                      <scg:List x:TypeArguments="InArgument" Capacity="4">
-                        <InArgument x:TypeArguments="x:String">["URL"]</InArgument>
-                      </scg:List>
-                    </ui:FilterDataTable.SelectColumns>
-                  </ui:FilterDataTable>
-                  <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DT2]" DisplayName="For Each Row" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
-                    <ui:ForEachRow.Body>
-                      <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'CS61A'" sap2010:WorkflowViewState.IdRef="BrowserScope_1" Selector="&lt;html title='CS 61A *' /&gt;">
+                    <ui:BrowserScope.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
-                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                          <Sequence.Variables>
-                            <Variable x:TypeArguments="ui:GenericValue" Name="rowItem" />
-                            <Variable x:TypeArguments="ui:GenericValue" Name="rowI" />
-                          </Sequence.Variables>
-                          <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="URL" DisplayName="Get Row Item" sap2010:WorkflowViewState.IdRef="GetRowItem_1" Row="[row]">
-                            <ui:GetRowItem.Value>
-                              <OutArgument x:TypeArguments="ui:GenericValue">[rowI]</OutArgument>
-                            </ui:GetRowItem.Value>
-                          </ui:GetRowItem>
-                          <Assign sap2010:WorkflowViewState.IdRef="Assign_1">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="ui:GenericValue">[rowI]</OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="ui:GenericValue">["https://cs61a.org/" + rowI]</InArgument>
-                            </Assign.Value>
-                          </Assign>
-                          <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" Result="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" BodyFormat="application/xml" DisplayName="HTTP Request" EndPoint="[rowI]" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" ResourcePath="[&quot;C:\Users\nowis\OneDrive\Documents\UiPath\CS61A\downloads\&quot; + Path.GetFileName(rowI)]" TimeoutMS="6000">
-                            <ui:HttpClient.Attachments>
-                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                            </ui:HttpClient.Attachments>
-                            <ui:HttpClient.Headers>
-                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                            </ui:HttpClient.Headers>
-                            <ui:HttpClient.Parameters>
-                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                            </ui:HttpClient.Parameters>
-                            <ui:HttpClient.UrlSegments>
-                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                            </ui:HttpClient.UrlSegments>
-                          </ui:HttpClient>
-                          <ui:CommentOut DisplayName="Comment Out" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                            <ui:CommentOut.Body>
-                              <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                                <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open Browser" Hidden="False" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" NewSession="True" Private="False" Url="[rowItem]">
-                                  <ui:OpenBrowser.Body>
-                                    <ActivityAction x:TypeArguments="x:Object">
-                                      <ActivityAction.Argument>
-                                        <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                                      </ActivityAction.Argument>
-                                      <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                                        <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="%%%[d(ctrl)]s[u(ctrl)]">
-                                          <ui:TypeInto.Target>
-                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
-                                          </ui:TypeInto.Target>
-                                        </ui:TypeInto>
-                                        <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'dialog  Save As'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="False" Text="%[k(enter)]">
-                                          <ui:TypeInto.Target>
-                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
-                                          </ui:TypeInto.Target>
-                                        </ui:TypeInto>
-                                        <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap2010:WorkflowViewState.IdRef="CloseTab_2" />
-                                      </Sequence>
-                                    </ActivityAction>
-                                  </ui:OpenBrowser.Body>
-                                </ui:OpenBrowser>
-                              </Sequence>
-                            </ui:CommentOut.Body>
-                          </ui:CommentOut>
+                        <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <ui:ExtractData NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data 'TBODY'" ExtractMetadata="&lt;extract&gt;&lt;column attr='href' name='URL' exact='1'&gt;&lt;webctrl tag='tr' class='odd' /&gt;&lt;webctrl tag='td' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="100">
+                            <ui:ExtractData.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;webctrl parentid='calendar' tag='TBODY' /&gt;" WaitForReady="COMPLETE" />
+                            </ui:ExtractData.Target>
+                          </ui:ExtractData>
+                          <ui:WriteCsvFile Encoding="{x:Null}" AddHeaders="True" DataTable="[ExtractDataTable]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Schedule.csv" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" />
+                          <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
                         </Sequence>
                       </ActivityAction>
-                    </ui:ForEachRow.Body>
-                  </ui:ForEachRow>
+                    </ui:BrowserScope.Body>
+                  </ui:BrowserScope>
                 </Sequence>
-              </ActivityAction>
-            </ui:ExcelApplicationScope.Body>
-          </ui:ExcelApplicationScope>
-          <FlowStep.Next>
-            <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_3">
-              <be:ZipFiles MultipleFolders="{x:Null}" Password="{x:Null}" DisplayName="Zip" sap2010:WorkflowViewState.IdRef="ZipFiles_1" SourceFolder="C:\Users\nowis\OneDrive\Documents\UiPath\CS61A\downloads" ZipFile="C:\Users\nowis\OneDrive\Documents\UiPath\CS61A\downloads\cs61a.zip" />
-              <FlowStep.Next>
-                <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_2">
-                  <ga:GoogleAuthenticationScope ClientSecret="{x:Null}" Timeout="{x:Null}" CertificatePassword="notasecret" CertificatePath="C:\Users\nowis\OneDrive\Documents\UiPath\Feed Me-e7d5c75598c9.p12" DisplayName="Google Drive Scope" ID="googledriveuploads@feed-me-220509.iam.gserviceaccount.com" sap2010:WorkflowViewState.IdRef="GoogleAuthenticationScope_1">
-                    <ActivityAction x:TypeArguments="ga:GoogleAuthenticationProperty">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="ga:GoogleAuthenticationProperty" Name="GoogleScope" />
-                      </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                        <Sequence.Variables>
-                          <Variable x:TypeArguments="x:String" Name="result" />
-                          <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="resultGetFile" />
-                          <Variable x:TypeArguments="x:String" Name="folderID" />
-                        </Sequence.Variables>
-                        <ga:CreateFolderOnGDrive ContinueOnError="{x:Null}" Timeout="{x:Null}" DisplayName="Create Folder" FolderName="cs61a" sap2010:WorkflowViewState.IdRef="CreateFolderOnGDrive_1" ParentID="1fViFqLQKVdkvWNi9cfjfhpdpnMBCwehY" Result="[folderID]" />
-                        <ui:LogMessage DisplayName="Log Message" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[folderID]" />
-                        <ga:UploadOnGDrive ContinueOnError="{x:Null}" Timeout="{x:Null}" DisplayName="Upload File" FilePath="C:\Users\nowis\OneDrive\Documents\UiPath\CS61A\downloads\cs61a.zip" FolderID="[folderID]" sap2010:WorkflowViewState.IdRef="UploadOnGDrive_1" Result="[result]" />
-                        <ui:LogMessage DisplayName="Log Message" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[result]" />
-                        <ga:GetGDriveFileInformation ContinueOnError="{x:Null}" Timeout="{x:Null}" DisplayName="Get File Information" FileID="[result]" sap2010:WorkflowViewState.IdRef="GetGDriveFileInformation_1" Result="[resultGetFile]" />
-                        <ui:LogMessage DisplayName="Log Message" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[resultGetFile(&quot;ID&quot;)]" />
-                        <Assign sap2010:WorkflowViewState.IdRef="Assign_2">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:String">[folderID]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:String">["https://drive.google.com/drive/u/0/folders/" + folderID]</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                        <Assign sap2010:WorkflowViewState.IdRef="Assign_3">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:String">[shareLink]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:String">[folderID]</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                      </Sequence>
-                    </ActivityAction>
-                  </ga:GoogleAuthenticationScope>
-                  <FlowStep.Next>
-                    <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_1">
-                      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Body="[&quot;Hello human. This is your minion and I have attached a link where you can download your class resourses. I will always be here at your service and as always, 'Automate and Chill' &quot; + &quot; Download link: &quot; + shareLink]" DisplayName="Send SMTP Mail Message" Email="nowisdumb@gmail.com" EnableSSL="True" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Name="Beep Boop" Password="1Sn00Py1" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Beep Boop" TimeoutMS="5000" To="[email]">
-                        <ui:SendMail.Files>
-                          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-                        </ui:SendMail.Files>
-                      </ui:SendMail>
-                    </FlowStep>
-                  </FlowStep.Next>
-                </FlowStep>
-              </FlowStep.Next>
-            </FlowStep>
-          </FlowStep.Next>
-        </FlowStep>
-      </FlowStep.Next>
-    </FlowStep>
+              </Sequence>
+            </ActivityAction>
+          </ui:OpenBrowser.Body>
+        </ui:OpenBrowser>
+        <FlowStep.Next>
+          <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_4">
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="Schedule.csv">
+              <ui:ExcelApplicationScope.Body>
+                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataTable" Name="DT1" />
+                      <Variable x:TypeArguments="sd:DataTable" Name="DT2" />
+                    </Sequence.Variables>
+                    <ui:ExcelReadRange AddHeaders="True" DataTable="[DT1]" DisplayName="Read Range" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="Schedule">
+                      <ui:ExcelReadRange.Range>
+                        <InArgument x:TypeArguments="x:String">
+                          <Literal x:TypeArguments="x:String" Value="" />
+                        </InArgument>
+                      </ui:ExcelReadRange.Range>
+                    </ui:ExcelReadRange>
+                    <ui:FilterDataTable DataTable="[DT1]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[DT2]" SelectColumnsMode="Keep">
+                      <ui:FilterDataTable.Filters>
+                        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                          <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
+                            <ui:FilterOperationArgument.Column>
+                              <InArgument x:TypeArguments="x:String">["URL"]</InArgument>
+                            </ui:FilterOperationArgument.Column>
+                            <ui:FilterOperationArgument.Operand>
+                              <InArgument x:TypeArguments="x:String">["pdf"]</InArgument>
+                            </ui:FilterOperationArgument.Operand>
+                          </ui:FilterOperationArgument>
+                        </scg:List>
+                      </ui:FilterDataTable.Filters>
+                      <ui:FilterDataTable.SelectColumns>
+                        <scg:List x:TypeArguments="InArgument" Capacity="4">
+                          <InArgument x:TypeArguments="x:String">["URL"]</InArgument>
+                        </scg:List>
+                      </ui:FilterDataTable.SelectColumns>
+                    </ui:FilterDataTable>
+                    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DT2]" DisplayName="For Each Row" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="ui:GenericValue" Name="rowItem" />
+                              <Variable x:TypeArguments="ui:GenericValue" Name="rowI" />
+                            </Sequence.Variables>
+                            <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="URL" DisplayName="Get Row Item" sap2010:WorkflowViewState.IdRef="GetRowItem_1" Row="[row]">
+                              <ui:GetRowItem.Value>
+                                <OutArgument x:TypeArguments="ui:GenericValue">[rowI]</OutArgument>
+                              </ui:GetRowItem.Value>
+                            </ui:GetRowItem>
+                            <Assign sap2010:WorkflowViewState.IdRef="Assign_1">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="ui:GenericValue">[rowI]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="ui:GenericValue">["https://cs61a.org/" + rowI]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" Result="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" BodyFormat="application/xml" DisplayName="HTTP Request" EndPoint="[rowI]" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" ResourcePath="[&quot;C:\Users\nowis\OneDrive\Documents\UiPath\CS61A\downloads\&quot; + Path.GetFileName(rowI)]" TimeoutMS="6000">
+                              <ui:HttpClient.Attachments>
+                                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                              </ui:HttpClient.Attachments>
+                              <ui:HttpClient.Headers>
+                                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                              </ui:HttpClient.Headers>
+                              <ui:HttpClient.Parameters>
+                                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                              </ui:HttpClient.Parameters>
+                              <ui:HttpClient.UrlSegments>
+                                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                              </ui:HttpClient.UrlSegments>
+                            </ui:HttpClient>
+                            <ui:CommentOut DisplayName="Comment Out" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                  <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open Browser" Hidden="False" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" NewSession="True" Private="False" Url="[rowItem]">
+                                    <ui:OpenBrowser.Body>
+                                      <ActivityAction x:TypeArguments="x:Object">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="%%%[d(ctrl)]s[u(ctrl)]">
+                                            <ui:TypeInto.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                            </ui:TypeInto.Target>
+                                          </ui:TypeInto>
+                                          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'dialog  Save As'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="False" Text="%[k(enter)]">
+                                            <ui:TypeInto.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                            </ui:TypeInto.Target>
+                                          </ui:TypeInto>
+                                          <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap2010:WorkflowViewState.IdRef="CloseTab_2" />
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ui:OpenBrowser.Body>
+                                  </ui:OpenBrowser>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                            </ui:CommentOut>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                    </ui:ForEachRow>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ExcelApplicationScope.Body>
+            </ui:ExcelApplicationScope>
+            <FlowStep.Next>
+              <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_3">
+                <be:ZipFiles MultipleFolders="{x:Null}" Password="{x:Null}" DisplayName="Zip" sap2010:WorkflowViewState.IdRef="ZipFiles_1" SourceFolder="C:\Users\nowis\OneDrive\Documents\UiPath\CS61A\downloads" ZipFile="C:\Users\nowis\OneDrive\Documents\UiPath\CS61A\downloads\cs61a.zip" />
+                <FlowStep.Next>
+                  <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_2">
+                    <ga:GoogleAuthenticationScope ClientSecret="{x:Null}" Timeout="{x:Null}" CertificatePassword="notasecret" CertificatePath="C:\Users\nowis\OneDrive\Documents\UiPath\TheLazyApp-6803ddf12606.p12" DisplayName="Google Drive Scope" ID="googledriveupload@thelazyapp-224807.iam.gserviceaccount.com" sap2010:WorkflowViewState.IdRef="GoogleAuthenticationScope_1">
+                      <ActivityAction x:TypeArguments="ga:GoogleAuthenticationProperty">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="ga:GoogleAuthenticationProperty" Name="GoogleScope" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="result" />
+                            <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="resultGetFile" />
+                            <Variable x:TypeArguments="x:String" Name="folderID" />
+                          </Sequence.Variables>
+                          <ga:CreateFolderOnGDrive ContinueOnError="{x:Null}" Timeout="{x:Null}" DisplayName="Create Folder" FolderName="cs61a" sap2010:WorkflowViewState.IdRef="CreateFolderOnGDrive_1" ParentID="1Xn1kMcLkUO0bVEzUxm6U6Z5E3FILb2aU" Result="[folderID]" />
+                          <ui:LogMessage DisplayName="Log Message" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[folderID]" />
+                          <ga:UploadOnGDrive ContinueOnError="{x:Null}" Timeout="{x:Null}" DisplayName="Upload File" FilePath="C:\Users\nowis\OneDrive\Documents\UiPath\CS61A\downloads\cs61a.zip" FolderID="[folderID]" sap2010:WorkflowViewState.IdRef="UploadOnGDrive_1" Result="[result]" />
+                          <ui:LogMessage DisplayName="Log Message" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[result]" />
+                          <ga:GetGDriveFileInformation ContinueOnError="{x:Null}" Timeout="{x:Null}" DisplayName="Get File Information" FileID="[result]" sap2010:WorkflowViewState.IdRef="GetGDriveFileInformation_1" Result="[resultGetFile]" />
+                          <ui:LogMessage DisplayName="Log Message" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[resultGetFile(&quot;ID&quot;)]" />
+                          <Assign sap2010:WorkflowViewState.IdRef="Assign_2">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[folderID]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">["https://drive.google.com/drive/u/0/folders/" + folderID]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap2010:WorkflowViewState.IdRef="Assign_3">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[shareLink]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[folderID]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </ActivityAction>
+                    </ga:GoogleAuthenticationScope>
+                    <FlowStep.Next>
+                      <FlowStep x:Name="__ReferenceID4">
+                        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Body="[&quot;Hello human. This is your minion and I have attached a link where you can download your class resourses. I will always be here at your service and as always, 'Automate and Chill' &quot; + &quot; Download link: &quot; + shareLink]" DisplayName="Send SMTP Mail Message" Email="automateandchill@gmail.com" EnableSSL="True" IsBodyHtml="False" Name="Beep Boop" Password="Automate&amp;chill1" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Beep Boop" TimeoutMS="5000" To="[email]">
+                          <ui:SendMail.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                          </ui:SendMail.Files>
+                          <sap2010:WorkflowViewState.IdRef>SendMail_2</sap2010:WorkflowViewState.IdRef>
+                        </ui:SendMail>
+                        <sap2010:WorkflowViewState.IdRef>FlowStep_6</sap2010:WorkflowViewState.IdRef>
+                      </FlowStep>
+                    </FlowStep.Next>
+                  </FlowStep>
+                </FlowStep.Next>
+              </FlowStep>
+            </FlowStep.Next>
+          </FlowStep>
+        </FlowStep.Next>
+      </FlowStep>
+    </Flowchart.StartNode>
     <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
-    <sads:DebugSymbol.Symbol>dzhDOlxVc2Vyc1xub3dpc1xPbmVEcml2ZVxEb2N1bWVudHNcVWlQYXRoXENTNjFBXE1haW4ueGFtbFtOA6kCDwIBAVA0UEgCAQNSNFJgAgECWAd5GAIBX3wL6gEmAgE77QEP7QGhAgIBOPABE5MCMgIBEJYCF5oCJQIBBFi9AVjJAQIBc14NdhgCAWB8pgF8tAECAV6CARHnARwCATztAZcB7QHRAQIBOu0B2gHtAZ4CAgE58AFw8AF8AgE38AH1AfABsAICATbwAY0B8AHQAQIBNfUBF5ECIgIBEZYC9gSWAv8EAgEOlgLsBJYC8gQCAQ2WAm2WAtsCAgELlgLWBJYC4QQCAQqWAocDlgKcAwIBCZYCmASWAp0EAgEIlgK9BJYCzQQCAQeWAogElgKSBAIBBpYC8wOWAv4DAgEFXw91GgIBYYcBE40BJwIBWY4BE6ABKAIBUaEBE+YBIwIBPfsBGfsBiwICATD8ARn8AZUBAgEt/QEZ/QGfAgIBJ/4BGf4BkwECAST/ARn/AfEBAgEfgAIZgAKqAQIBHIECGYgCIgIBF4kCGZACIgIBEmFEYWECAWJjEXQjAgFjhwFChwFJAgFcigEZigFIAgFbhwGgAYcBqgECAVqTAUSTAUsCAViWAUSWAUsCAVeOAbMBjgG6AQIBVY4BMY4BOAIBU50BQJ0BRwIBUqEBRKEBSwIBT6cBGeMBJAIBPvsB0QH7AfQBAgE0+wH8AfsBiAICATL7AYcB+wGOAQIBMfwBhgH8AZIBAgEu/QHLAf0B1wECASv9AZIC/QGcAgIBKf0Bff0BwQECASj+AYYB/gGQAQIBJf8B3QH/Ae4BAgEi/wGOAf8BmAECASCAAoYBgAKnAQIBHYYCRIYCfgIBGoMCRYMCTwIBGI4CRI4CTgIBFYsCRYsCUAIBE2PmAWOHAgIBcmkXcSICAWSsARuwASsCAUmxARu4ASQCAUS5ARvGASsCAUDHARviASsCAT9qGW4qAgFqbxlv5gECAWZwGXCAAQIBZa4BTq4BVAIBTawBsgGsAbkBAgFLrAFerAFjAgFKtgFNtgFqAgFHswFOswFUAgFFuQG0BLkBugQCAUO5AccDuQGpBAIBQrkB9QK5Af0CAgFBatcDatwDAgFxbHNspgECAXBqjwFqlAECAW9qVWpbAgFuamZqegIBbGrTAWqTAwIBa29ab24CAWhvpAFvsgECAWc=</sads:DebugSymbol.Symbol>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <sads:DebugSymbol.Symbol>d0lDOlxVc2Vyc1xub3dpc1xPbmVEcml2ZVxEZXNrdG9wXG5ld0xhenlBcHBcQXV0b21hdGUtQ2hpbGxcQ1M2MUFcTWFpbi54YW1sW04DqwIPAgEBUDRQSAIBA1I0UmACAQJWCXcaAgFfeg3oASgCATvrARHrAaMCAgE47gEVkQI0AgEQlAIZmQInAgEEVr8BVssBAgFzXA90GgIBYHqoAXq2AQIBXoABE+UBHgIBPOsBmQHrAdMBAgE66wHcAesBoAICATnuAXLuAX4CATfuAfoB7gG3AgIBNu4BjwHuAdUBAgE18wEZjwIkAgERlALdBJQC5gQCAQ6UAtMElALZBAIBDZQCb5QC3QICAQuUAr0ElALIBAIBCpQCiQOUAqUDAgEJlAL/A5QChAQCAQiUAqQElAK0BAIBB5QC5AOUAvkDAgEGlALPA5QC2gMCAQVdEXMcAgFhhQEViwEpAgFZjAEVngEqAgFRnwEV5AElAgE9+QEb+QGNAgIBMPoBG/oBlwECAS37ARv7AaECAgEn/AEb/AGVAQIBJP0BG/0B8wECAR/+ARv+AawBAgEc/wEbhgIkAgEXhwIbjgIkAgESX0ZfYwIBYmETciUCAWOFAUSFAUsCAVyIARuIAUoCAVuFAaIBhQGsAQIBWpEBRpEBTQIBWJQBRpQBTQIBV4wBtQGMAbwBAgFVjAEzjAE6AgFTmwFCmwFJAgFSnwFGnwFNAgFPpQEb4QEmAgE++QHTAfkB9gECATT5Af4B+QGKAgIBMvkBiQH5AZABAgEx+gGIAfoBlAECAS77Ac0B+wHZAQIBK/sBlAL7AZ4CAgEp+wF/+wHDAQIBKPwBiAH8AZIBAgEl/QHfAf0B8AECASL9AZAB/QGaAQIBIP4BiAH+AakBAgEdhAJGhAKAAQIBGoECR4ECUQIBGIwCRowCUAIBFYkCR4kCUgIBE2HoAWGJAgIBcmcZbyQCAWSqAR2uAS0CAUmvAR22ASYCAUS3AR3EAS0CAUDFAR3gAS0CAT9oG2wsAgFqbRtt6AECAWZuG26CAQIBZawBUKwBVgIBTaoBtAGqAbsBAgFLqgFgqgFlAgFKtAFPtAFsAgFHsQFQsQFWAgFFtwG2BLcBvAQCAUO3AckDtwGrBAIBQrcB9wK3Af8CAgFBaNkDaN4DAgFxanVqqAECAXBokQFolgECAW9oV2hdAgFuaGhofAIBbGjVAWiVAwIBa21cbXACAWhtpgFttAECAWc=</sads:DebugSymbol.Symbol>
   </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -399,19 +401,20 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="GoogleAuthenticationScope_1" sap:VirtualizedContainerService.HintSize="377.2,1139.6">
+      <sap2010:ViewStateData Id="GoogleAuthenticationScope_1" sap:VirtualizedContainerService.HintSize="384.8,1139.6">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="SendMail_1" sap:VirtualizedContainerService.HintSize="200,52.4" />
-      <sap2010:ViewStateData Id="FlowStep_1">
+      <sap2010:ViewStateData Id="SendMail_2" sap:VirtualizedContainerService.HintSize="200,52.4" />
+      <sap2010:ViewStateData Id="FlowStep_6">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:Point x:Key="ShapeLocation">570,363.8</av:Point>
+            <av:Point x:Key="ShapeLocation">560,293.8</av:Point>
             <av:Size x:Key="ShapeSize">200,52.4</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">495.4,92.8399999999999 495.4,148.84</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
@@ -419,8 +422,8 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">101.4,352.4</av:Point>
-            <av:Size x:Key="ShapeSize">377.2,1139.6</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">478.6,922.2 508.6,922.2 508.6,390 570,390</av:PointCollection>
+            <av:Size x:Key="ShapeSize">384.8,1139.6</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">486.2,922.2 516.2,922.2 516.2,320 560,320</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
@@ -429,7 +432,7 @@
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">190,229</av:Point>
             <av:Size x:Key="ShapeSize">200,22</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">290,251 290,352.4</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">290,251 290,281 293.8,281 293.8,352.4</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
@@ -463,7 +466,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="824,1747.2" />
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="824,1787.2" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

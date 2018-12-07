@@ -252,7 +252,7 @@
                 <be:ZipFiles MultipleFolders="{x:Null}" Password="{x:Null}" DisplayName="Zip" sap2010:WorkflowViewState.IdRef="ZipFiles_1" SourceFolder="C:\Users\nowis\OneDrive\Documents\UiPath\CS61B\downloads" ZipFile="C:\Users\nowis\OneDrive\Documents\UiPath\CS61B\downloads\cs61b.zip" />
                 <FlowStep.Next>
                   <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_10">
-                    <ga:GoogleAuthenticationScope ClientSecret="{x:Null}" Timeout="{x:Null}" CertificatePassword="notasecret" CertificatePath="C:\Users\nowis\OneDrive\Documents\UiPath\Feed Me-e7d5c75598c9.p12" DisplayName="Google Drive Scope" ID="googledriveuploads@feed-me-220509.iam.gserviceaccount.com" sap2010:WorkflowViewState.IdRef="GoogleAuthenticationScope_1">
+                    <ga:GoogleAuthenticationScope ClientSecret="{x:Null}" Timeout="{x:Null}" CertificatePassword="notasecret" CertificatePath="C:\Users\nowis\OneDrive\Documents\UiPath\TheLazyApp-6803ddf12606.p12" DisplayName="Google Drive Scope" ID="googledriveupload@thelazyapp-224807.iam.gserviceaccount.com" sap2010:WorkflowViewState.IdRef="GoogleAuthenticationScope_1">
                       <ActivityAction x:TypeArguments="ga:GoogleAuthenticationProperty">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="ga:GoogleAuthenticationProperty" Name="GoogleScope" />
@@ -263,7 +263,7 @@
                             <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="resultGetFile" />
                             <Variable x:TypeArguments="x:String" Name="folderID" />
                           </Sequence.Variables>
-                          <ga:CreateFolderOnGDrive ContinueOnError="{x:Null}" Timeout="{x:Null}" DisplayName="Create Folder" FolderName="cs61b" sap2010:WorkflowViewState.IdRef="CreateFolderOnGDrive_1" ParentID="1fViFqLQKVdkvWNi9cfjfhpdpnMBCwehY" Result="[folderID]" />
+                          <ga:CreateFolderOnGDrive ContinueOnError="{x:Null}" Timeout="{x:Null}" DisplayName="Create Folder" FolderName="cs61b" sap2010:WorkflowViewState.IdRef="CreateFolderOnGDrive_1" ParentID="1Xn1kMcLkUO0bVEzUxm6U6Z5E3FILb2aU" Result="[folderID]" />
                           <ui:LogMessage DisplayName="Log Message" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[folderID]" />
                           <ga:UploadOnGDrive ContinueOnError="{x:Null}" Timeout="{x:Null}" DisplayName="Upload File" FilePath="C:\Users\nowis\OneDrive\Documents\UiPath\CS61B\downloads\cs61b.zip" FolderID="[folderID]" sap2010:WorkflowViewState.IdRef="UploadOnGDrive_1" Result="[result]" />
                           <ui:LogMessage DisplayName="Log Message" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[result]" />
@@ -289,12 +289,14 @@
                       </ActivityAction>
                     </ga:GoogleAuthenticationScope>
                     <FlowStep.Next>
-                      <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_12">
-                        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Body="[&quot;Hello human. This is your minion and I have attached a link where you can download your class resourses. I will always be here at your service and as always, 'Automate and Chill' &quot; + &quot; Download link: &quot; + shareLink]" DisplayName="Send SMTP Mail Message" Email="nowisdumb@gmail.com" EnableSSL="True" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Name="Beep Boop" Password="1Sn00Py1" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Beep Boop" TimeoutMS="5000" To="[email]">
+                      <FlowStep x:Name="__ReferenceID4">
+                        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Body="[&quot;Hello human. This is your minion and I have attached a link where you can download your class resourses. I will always be here at your service and as always, 'Automate and Chill' &quot; + &quot; Download link: &quot; + shareLink]" DisplayName="Send SMTP Mail Message" Email="automateandchill@gmail.com" EnableSSL="True" IsBodyHtml="False" Name="Beep Boop" Password="Automate&amp;chill1" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Beep Boop" TimeoutMS="5000" To="[email]">
                           <ui:SendMail.Files>
                             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                           </ui:SendMail.Files>
+                          <sap2010:WorkflowViewState.IdRef>SendMail_2</sap2010:WorkflowViewState.IdRef>
                         </ui:SendMail>
+                        <sap2010:WorkflowViewState.IdRef>FlowStep_13</sap2010:WorkflowViewState.IdRef>
                       </FlowStep>
                     </FlowStep.Next>
                   </FlowStep>
@@ -310,7 +312,7 @@
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
-    <sads:DebugSymbol.Symbol>dzhDOlxVc2Vyc1xub3dpc1xPbmVEcml2ZVxEb2N1bWVudHNcVWlQYXRoXENTNjFCXE1haW4ueGFtbFtfA7oCDwIBAWE0YUgCAQNjNGNgAgECZwmIARoCAV+LAQ35ASgCATv8ARH8AaMCAgE4/wEVogI0AgEQpQIZqQInAgEEZ8ABZ80BAgFzbQ+FARoCAWCLAagBiwG3AQIBXpEBE/YBHgIBPPwBmQH8AdMBAgE6/AHcAfwBoAICATn/AXL/AX4CATf/AfcB/wGyAgIBNv8BjwH/AdIBAgE1hAIZoAIkAgERpQL4BKUCgQUCAQ6lAu4EpQL0BAIBDaUCb6UC3QICAQulAtgEpQLjBAIBCqUCiQOlAp4DAgEJpQKaBKUCnwQCAQilAr8EpQLPBAIBB6UCigSlApQEAgEGpQL1A6UCgAQCAQVuEYQBHAIBYZYBFZwBKQIBWZ0BFa8BKgIBUbABFfUBJQIBPYoCG4oCjQICATCLAhuLApcBAgEtjAIbjAKhAgIBJ40CG40ClQECASSOAhuOAvMBAgEfjwIbjwKsAQIBHJACG5cCJAIBF5gCG58CJAIBEnBGcGMCAWJyE4MBJQIBY5YBRJYBSwIBXJkBG5kBSgIBW5YBogGWAa0BAgFaogFGogFNAgFYpQFGpQFNAgFXnQG1AZ0BvAECAVWdATOdAToCAVOsAUKsAUkCAVKwAUawAU0CAU+2ARvyASYCAT6KAtMBigL2AQIBNIoC/gGKAooCAgEyigKJAYoCkAECATGLAogBiwKUAQIBLowCzQGMAtkBAgErjAKUAowCngICASmMAn+MAsMBAgEojQKIAY0CkgECASWOAt8BjgLwAQIBIo4CkAGOApoBAgEgjwKIAY8CqQECAR2VAkaVAoABAgEakgJHkgJRAgEYnQJGnQJQAgEVmgJHmgJSAgETcvIBcpoCAgFyeBmAASQCAWS7AR2/AS0CAUnAAR3HASYCAUTIAR3VAS0CAUDWAR3xAS0CAT95G30sAgFqfht+6gECAWZ/G3+CAQIBZb0BUL0BVgIBTbsBtAG7AbsBAgFLuwFguwFlAgFKxQFPxQGFAQIBR8IBUMIBVgIBRcgBtgTIAbwEAgFDyAHJA8gBqwQCAULIAfcCyAH/AgIBQXnaA3nfAwIBcXt1e6gBAgFweZEBeZYBAgFveVd5XQIBbnloeXwCAWx51QF5lQMCAWt+XH5wAgFofqYBfrUBAgFn</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d0lDOlxVc2Vyc1xub3dpc1xPbmVEcml2ZVxEZXNrdG9wXG5ld0xhenlBcHBcQXV0b21hdGUtQ2hpbGxcQ1M2MUJcTWFpbi54YW1sW18DvAIPAgEBYTRhSAIBA2M0Y2ACAQJnCYgBGgIBX4sBDfkBKAIBO/wBEfwBowICATj/ARWiAjQCARClAhmqAicCAQRnwAFnzQECAXNtD4UBGgIBYIsBqAGLAbcBAgFekQET9gEeAgE8/AGZAfwB0wECATr8AdwB/AGgAgIBOf8Bcv8BfgIBN/8B+gH/AbcCAgE2/wGPAf8B1QECATWEAhmgAiQCARGlAt0EpQLmBAIBDqUC0wSlAtkEAgENpQJvpQLdAgIBC6UCvQSlAsgEAgEKpQKJA6UCpQMCAQmlAv8DpQKEBAIBCKUCpASlArQEAgEHpQLkA6UC+QMCAQalAs8DpQLaAwIBBW4RhAEcAgFhlgEVnAEpAgFZnQEVrwEqAgFRsAEV9QElAgE9igIbigKNAgIBMIsCG4sClwECAS2MAhuMAqECAgEnjQIbjQKVAQIBJI4CG44C8wECAR+PAhuPAqwBAgEckAIblwIkAgEXmAIbnwIkAgEScEZwYwIBYnITgwElAgFjlgFElgFLAgFcmQEbmQFKAgFblgGiAZYBrQECAVqiAUaiAU0CAVilAUalAU0CAVedAbUBnQG8AQIBVZ0BM50BOgIBU6wBQqwBSQIBUrABRrABTQIBT7YBG/IBJgIBPooC0wGKAvYBAgE0igL+AYoCigICATKKAokBigKQAQIBMYsCiAGLApQBAgEujALNAYwC2QECASuMApQCjAKeAgIBKYwCf4wCwwECASiNAogBjQKSAQIBJY4C3wGOAvABAgEijgKQAY4CmgECASCPAogBjwKpAQIBHZUCRpUCgAECARqSAkeSAlECARidAkadAlACARWaAkeaAlICARNy8gFymgICAXJ4GYABJAIBZLsBHb8BLQIBScABHccBJgIBRMgBHdUBLQIBQNYBHfEBLQIBP3kbfSwCAWp+G37qAQIBZn8bf4IBAgFlvQFQvQFWAgFNuwG0AbsBuwECAUu7AWC7AWUCAUrFAU/FAYUBAgFHwgFQwgFWAgFFyAG2BMgBvAQCAUPIAckDyAGrBAIBQsgB9wLIAf8CAgFBedoDed8DAgFxe3V7qAECAXB5kQF5lgECAW95V3ldAgFueWh5fAIBbHnVAXmVAwIBa35cfnACAWh+pgF+tQECAWc=</sads:DebugSymbol.Symbol>
   </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -339,7 +341,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="OpenBrowser_13" sap:VirtualizedContainerService.HintSize="200,52.4">
+      <sap2010:ViewStateData Id="OpenBrowser_13" sap:VirtualizedContainerService.HintSize="200,52">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -386,21 +388,21 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ExcelApplicationScope_7" sap:VirtualizedContainerService.HintSize="200,52.4" />
+      <sap2010:ViewStateData Id="ExcelApplicationScope_7" sap:VirtualizedContainerService.HintSize="200,52" />
       <sap2010:ViewStateData Id="ZipFiles_1" sap:VirtualizedContainerService.HintSize="200,22" />
-      <sap2010:ViewStateData Id="CreateFolderOnGDrive_1" sap:VirtualizedContainerService.HintSize="314,83.2" />
-      <sap2010:ViewStateData Id="LogMessage_1" sap:VirtualizedContainerService.HintSize="314,93.6" />
-      <sap2010:ViewStateData Id="UploadOnGDrive_1" sap:VirtualizedContainerService.HintSize="314,83.2">
+      <sap2010:ViewStateData Id="CreateFolderOnGDrive_1" sap:VirtualizedContainerService.HintSize="314,82.4" />
+      <sap2010:ViewStateData Id="LogMessage_1" sap:VirtualizedContainerService.HintSize="314,92.8" />
+      <sap2010:ViewStateData Id="UploadOnGDrive_1" sap:VirtualizedContainerService.HintSize="314,82.4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="LogMessage_2" sap:VirtualizedContainerService.HintSize="314,93.6" />
-      <sap2010:ViewStateData Id="GetGDriveFileInformation_1" sap:VirtualizedContainerService.HintSize="314,59.6" />
-      <sap2010:ViewStateData Id="LogMessage_3" sap:VirtualizedContainerService.HintSize="314,93.6" />
-      <sap2010:ViewStateData Id="Assign_6" sap:VirtualizedContainerService.HintSize="314,59.6">
+      <sap2010:ViewStateData Id="LogMessage_2" sap:VirtualizedContainerService.HintSize="314,92.8" />
+      <sap2010:ViewStateData Id="GetGDriveFileInformation_1" sap:VirtualizedContainerService.HintSize="314,59.2" />
+      <sap2010:ViewStateData Id="LogMessage_3" sap:VirtualizedContainerService.HintSize="314,92.8" />
+      <sap2010:ViewStateData Id="Assign_6" sap:VirtualizedContainerService.HintSize="314,59.2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -408,27 +410,28 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Assign_7" sap:VirtualizedContainerService.HintSize="314,59.6" />
-      <sap2010:ViewStateData Id="Sequence_86" sap:VirtualizedContainerService.HintSize="336,1030">
+      <sap2010:ViewStateData Id="Assign_7" sap:VirtualizedContainerService.HintSize="314,59.2" />
+      <sap2010:ViewStateData Id="Sequence_86" sap:VirtualizedContainerService.HintSize="336,1024.8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="GoogleAuthenticationScope_1" sap:VirtualizedContainerService.HintSize="377.2,1139.6">
+      <sap2010:ViewStateData Id="GoogleAuthenticationScope_1" sap:VirtualizedContainerService.HintSize="382.8,1134">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="SendMail_1" sap:VirtualizedContainerService.HintSize="200,52.4" />
-      <sap2010:ViewStateData Id="FlowStep_12">
+      <sap2010:ViewStateData Id="SendMail_2" sap:VirtualizedContainerService.HintSize="200,52" />
+      <sap2010:ViewStateData Id="FlowStep_13">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">570,363.8</av:Point>
-            <av:Size x:Key="ShapeSize">200,52.4</av:Size>
+            <av:Size x:Key="ShapeSize">200,52</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">487.4,541.24 487.4,597.24</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
@@ -436,8 +439,8 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">101.4,352.4</av:Point>
-            <av:Size x:Key="ShapeSize">377.2,1139.6</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">478.6,922.2 508.6,922.2 508.6,390 570,390</av:PointCollection>
+            <av:Size x:Key="ShapeSize">382.8,1134</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">484.2,919.4 514.2,919.4 514.2,389.8 570,389.8</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
@@ -446,7 +449,7 @@
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">190,229</av:Point>
             <av:Size x:Key="ShapeSize">200,22</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">290,251 290,352.4</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">290,251 290,281 293.8,281 293.8,352.4</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
@@ -454,7 +457,7 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">360,123.8</av:Point>
-            <av:Size x:Key="ShapeSize">200,52.4</av:Size>
+            <av:Size x:Key="ShapeSize">200,52</av:Size>
             <av:PointCollection x:Key="ConnectorLocation">460,176.2 460,206.2 290,206.2 290,229</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
@@ -463,7 +466,7 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">20,123.8</av:Point>
-            <av:Size x:Key="ShapeSize">200,52.4</av:Size>
+            <av:Size x:Key="ShapeSize">200,52</av:Size>
             <av:PointCollection x:Key="ConnectorLocation">220,150 360,150</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
