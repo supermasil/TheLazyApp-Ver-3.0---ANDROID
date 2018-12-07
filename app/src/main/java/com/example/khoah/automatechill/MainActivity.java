@@ -34,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
     String usernameKhoa = "supermasil";
     String emailKhoa = "khoa.hoang@berkeley.edu";
     String userNameJessie = "JessieGross";
-    String emailJessie = "jvgross@berkeley.edu";
+    String JessieEmail = "jvgross@berkeley.edu";
+
+    String emailDefault = "automateandchill@gmail.com";
     String passwordDefault = "Automate&chill1";
 
     private static final String TAG = MainActivity.class.getName();
@@ -133,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
         JSONObject requestBody = new JSONObject();
         try {
             requestBody.put("tenancyName", userNameJessie);
-            requestBody.put("usernameOrEmailAddress", emailJessie);
+            requestBody.put("usernameOrEmailAddress", emailDefault);
             requestBody.put("password", passwordDefault);
 
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
