@@ -1660,15 +1660,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nowis\\.nuget\\packages\\": {}
+    "C:\\Users\\khoah\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "cs70",
       "projectName": "cs70",
-      "projectPath": "C:\\Users\\nowis\\OneDrive\\Documents\\UiPath\\cs70\\.local",
-      "packagesPath": "C:\\Users\\nowis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nowis\\OneDrive\\Documents\\UiPath\\cs70\\.local"
+      "projectPath": "D:\\OneDrive\\BERKELEY\\Projects\\Automate-Chill\\CS70\\.local",
+      "packagesPath": "C:\\Users\\khoah\\.nuget\\packages\\",
+      "outputPath": "D:\\OneDrive\\BERKELEY\\Projects\\Automate-Chill\\CS70\\.local"
     },
     "frameworks": {
       "net461": {
