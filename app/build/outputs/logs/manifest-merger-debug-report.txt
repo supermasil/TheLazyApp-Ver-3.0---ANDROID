@@ -1,0 +1,177 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:2:1-22:12
+MERGED from [com.android.support:design:28.0.0-alpha3] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\design-28.0.0-alpha3.aar\647a5b20aaab20be506aa0d9652d66e4\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\81d52b4173194383409935fdd78da04a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\56adcb0af676a27515cd1d623d28a990\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\volley-1.1.0.aar\7793375e713f4a8adcc1900782d099ef\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:transition:28.0.0-alpha3] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\transition-28.0.0-alpha3.aar\e18e7e2588e0f2feac583ffe0e1ad669\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0-alpha3] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0-alpha3.aar\e8738aa057bed62a7eca524b381e9a50\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0-alpha3] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0-alpha3.aar\4d3e0996b6f42ec51ab488fab26abc46\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\0d0c9a0f7a6df18604b86d5725370b66\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\d3075090a845cc3e7cf7a65664691edd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\3c4ddd9e5e6e07b0f681dc3d5583d245\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\dded72c0dc9a115b2e7a075ce454acfd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\88db7c83a5602150e7bb6f406174422a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\8093b14870f43f1ea0a888ce28c7dd66\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\239f948e6b306965740796196c95c6d6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\c6ca653e195d062726004aa491f2edd1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\fc59df8794ec1105e899ed3cc1cded95\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\b4161c4b1d55b9b3ac603a640d80599a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\71f9d0bfa532d0a0a2723d63ef92c96e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\0201defbbb0770ec6521f19582cb53d4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\a62c20e2ff955431c1f1d1c8b3608744\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\1ff580e4f07079f82b7d8ed8bd21593e\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\dcb4797752fd78d4edb92a192f614857\AndroidManifest.xml:17:1-25:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\a613c905d897d5bc3ae17e237796b580\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\492e3b69e0682c4f7828f7b6e52d3d67\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\c8555d9ad8e5ffd02e0efb501fff3045\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\44441d376e85df674370fe64457bd4c8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\bcc04957cfa9efbae816dbefb10347a9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\4af5c23df5928cf5a9a7d6e7ef9256e2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\e64594c8543f837bd4df52af53bb9bf9\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\7ed82aed686551f594010d002c12f440\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\0ba75a8aa086bd76420b3371e4e80767\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\77473558a34b49625dcd6345547f5654\AndroidManifest.xml:17:1-22:12
+INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:2:1-22:12
+	package
+		ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:3:5-46
+		INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml
+		INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml
+		ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:2:1-22:12
+		INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml
+		ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:2:1-22:12
+		INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:4:22-64
+application
+ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:6:5-20:19
+MERGED from [com.android.support:design:28.0.0-alpha3] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\design-28.0.0-alpha3.aar\647a5b20aaab20be506aa0d9652d66e4\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0-alpha3] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\design-28.0.0-alpha3.aar\647a5b20aaab20be506aa0d9652d66e4\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\56adcb0af676a27515cd1d623d28a990\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\56adcb0af676a27515cd1d623d28a990\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\volley-1.1.0.aar\7793375e713f4a8adcc1900782d099ef\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\volley-1.1.0.aar\7793375e713f4a8adcc1900782d099ef\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\1ff580e4f07079f82b7d8ed8bd21593e\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\1ff580e4f07079f82b7d8ed8bd21593e\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\dcb4797752fd78d4edb92a192f614857\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\dcb4797752fd78d4edb92a192f614857\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\1ff580e4f07079f82b7d8ed8bd21593e\AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:11:9-35
+	android:label
+		ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:9:9-41
+	android:roundIcon
+		ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:10:9-54
+	android:icon
+		ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:8:9-43
+	android:allowBackup
+		ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:7:9-35
+	android:theme
+		ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:12:9-40
+activity#com.example.khoah.automatechill.MainActivity
+ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:13:9-19:20
+	android:name
+		ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:13:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:14:13-18:29
+action#android.intent.action.MAIN
+ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:15:17-69
+	android:name
+		ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:15:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:17:17-77
+	android:name
+		ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml:17:27-74
+uses-sdk
+INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml
+INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0-alpha3] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\design-28.0.0-alpha3.aar\647a5b20aaab20be506aa0d9652d66e4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0-alpha3] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\design-28.0.0-alpha3.aar\647a5b20aaab20be506aa0d9652d66e4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\81d52b4173194383409935fdd78da04a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\81d52b4173194383409935fdd78da04a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\56adcb0af676a27515cd1d623d28a990\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\56adcb0af676a27515cd1d623d28a990\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\volley-1.1.0.aar\7793375e713f4a8adcc1900782d099ef\AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\volley-1.1.0.aar\7793375e713f4a8adcc1900782d099ef\AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:transition:28.0.0-alpha3] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\transition-28.0.0-alpha3.aar\e18e7e2588e0f2feac583ffe0e1ad669\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0-alpha3] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\transition-28.0.0-alpha3.aar\e18e7e2588e0f2feac583ffe0e1ad669\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0-alpha3] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0-alpha3.aar\e8738aa057bed62a7eca524b381e9a50\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0-alpha3] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0-alpha3.aar\e8738aa057bed62a7eca524b381e9a50\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0-alpha3] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0-alpha3.aar\4d3e0996b6f42ec51ab488fab26abc46\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0-alpha3] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0-alpha3.aar\4d3e0996b6f42ec51ab488fab26abc46\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\0d0c9a0f7a6df18604b86d5725370b66\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\0d0c9a0f7a6df18604b86d5725370b66\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\d3075090a845cc3e7cf7a65664691edd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\d3075090a845cc3e7cf7a65664691edd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\3c4ddd9e5e6e07b0f681dc3d5583d245\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\3c4ddd9e5e6e07b0f681dc3d5583d245\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\dded72c0dc9a115b2e7a075ce454acfd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\dded72c0dc9a115b2e7a075ce454acfd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\88db7c83a5602150e7bb6f406174422a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\88db7c83a5602150e7bb6f406174422a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\8093b14870f43f1ea0a888ce28c7dd66\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\8093b14870f43f1ea0a888ce28c7dd66\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\239f948e6b306965740796196c95c6d6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\239f948e6b306965740796196c95c6d6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\c6ca653e195d062726004aa491f2edd1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\c6ca653e195d062726004aa491f2edd1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\fc59df8794ec1105e899ed3cc1cded95\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\fc59df8794ec1105e899ed3cc1cded95\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\b4161c4b1d55b9b3ac603a640d80599a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\b4161c4b1d55b9b3ac603a640d80599a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\71f9d0bfa532d0a0a2723d63ef92c96e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\71f9d0bfa532d0a0a2723d63ef92c96e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\0201defbbb0770ec6521f19582cb53d4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\0201defbbb0770ec6521f19582cb53d4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\a62c20e2ff955431c1f1d1c8b3608744\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\a62c20e2ff955431c1f1d1c8b3608744\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\1ff580e4f07079f82b7d8ed8bd21593e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\1ff580e4f07079f82b7d8ed8bd21593e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\dcb4797752fd78d4edb92a192f614857\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\dcb4797752fd78d4edb92a192f614857\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\a613c905d897d5bc3ae17e237796b580\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\a613c905d897d5bc3ae17e237796b580\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\492e3b69e0682c4f7828f7b6e52d3d67\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\492e3b69e0682c4f7828f7b6e52d3d67\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\c8555d9ad8e5ffd02e0efb501fff3045\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\c8555d9ad8e5ffd02e0efb501fff3045\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\44441d376e85df674370fe64457bd4c8\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\44441d376e85df674370fe64457bd4c8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\bcc04957cfa9efbae816dbefb10347a9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\bcc04957cfa9efbae816dbefb10347a9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\4af5c23df5928cf5a9a7d6e7ef9256e2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\4af5c23df5928cf5a9a7d6e7ef9256e2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\e64594c8543f837bd4df52af53bb9bf9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\e64594c8543f837bd4df52af53bb9bf9\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\7ed82aed686551f594010d002c12f440\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\7ed82aed686551f594010d002c12f440\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\0ba75a8aa086bd76420b3371e4e80767\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\0ba75a8aa086bd76420b3371e4e80767\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\77473558a34b49625dcd6345547f5654\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\khoah\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\77473558a34b49625dcd6345547f5654\AndroidManifest.xml:20:5-44
+INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml
+INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml
+		ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml
+		INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml
+		ADDED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml
+		INJECTED from D:\OneDrive\BERKELEY\Projects\Automate-Chill\app\src\main\AndroidManifest.xml
