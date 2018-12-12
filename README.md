@@ -1,8 +1,7 @@
 # TheLazyApp
 The Robotic Process Automation (RPA) app that won UiPath's RPA challenge at Cal Hacks 5.0 (November 2-4 2018 at UC Berkeley)
 
-VERSION 2.0
-Updates:
+VERSION 2.0 Updates:
 - The process is modularized to different process: DataScraping, Zipping, Google Drive and Email
 - To add a different class, just need to add the data scraping process and everything else is taken care of.
 
@@ -26,6 +25,8 @@ The idea went through a lot of challenges as almost everything was brand new to 
 We have always dreamt of building applications benefiting the community and if the oppotunity comes, we can make it bigger. That's why we're also building another app on both Android and IOS called Calbikes utilizing GoogleMap API to locate bike racks, pumps and shops as we realized we always had a hard time finding those as bikers.
 
 Finally, we would like to give shoutouts to Eric, Evans and Joseph and others from UIPath for helping us the entire time through many difficult challenges and we also would like to thank Calhacks5.0 team for organizing such an amazing hackathon.
+
+https://www.youtube.com/watch?v=4lqnoykI7rk&feature=youtu.be
 
 [![IMAGE ALT TEXT HERE](./screenshot1.PNG)](https://www.youtube.com/watch?v=4lqnoykI7rk&feature=youtu.be)
 [![IMAGE ALT TEXT HERE](./screenshot2.PNG)](https://www.youtube.com/watch?v=4lqnoykI7rk&feature=youtu.be)
