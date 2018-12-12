@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
     String userNameJessie = "JessieGross";
     String JessieEmail = "jvgross@berkeley.edu";
 
+
+    String tenantName = userNameJessie;
     String emailDefault = "automateandchill@gmail.com";
     String passwordDefault = "Automate&chill1";
 
@@ -45,20 +47,13 @@ public class MainActivity extends AppCompatActivity {
     String urlJob = "https://platform.uipath.com/odata/Jobs/UiPath.Server.Configuration.OData.StartJobs";
     JSONObject respondedParams;
 
-    // CHANGE THIS
-    String releaseKey = "";
-//    String key61A = "b105f911-ee38-4665-bb32-6ab3a5cb16e4";
-//    String key61B = "ad73965f-3a7f-42b1-b17f-406b045b2b6e";
-//    String test = "7f887794-5620-4141-9a99-bc16f1492bff";
-//    //String key70 = "80442247-68e1-4cd1-ba96-7c0d3eefe27f";
-
-    String key61A = "ba723b08-734d-4ed7-a5b3-8c4d9bfbb266";
-    String key61B = "015c8135-97ec-4c61-aa1a-b8d5ef6e1257";
-    String key70 = "ac5991d7-4968-48c1-8ccd-335ca15cd5c3";
-
+    // This is from Odata/releases on Swagger
+    String releaseKey = "c59d2434-0aa1-4eb7-aa02-f2528d28a6e2";
 
     String resultKey;
     TextView mTextView;
+
+    String userClassChoice;
 
     private TextWatcher emailInputWatcher = new TextWatcher() {
         @Override
@@ -104,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 System.out.println("CS61A Clicked");
-                releaseKey = key61A;
+                userClassChoice = "Case1";
                 startAJob(respondedParams);
                 runProgressBar();
             }
@@ -114,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 System.out.println("CS61B Clicked");
-                releaseKey = key61B;
+                userClassChoice = "Case2";
                 startAJob(respondedParams);
                 runProgressBar();
             }
@@ -124,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 System.out.println("CS70 Clicked");
-                releaseKey = key70;
+                userClassChoice = "Case3";
                 startAJob(respondedParams);
                 runProgressBar();
             }
@@ -134,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
     private void sendRequestAndPrintResponse() {
         JSONObject requestBody = new JSONObject();
         try {
-            requestBody.put("tenancyName", userNameJessie);
+            requestBody.put("tenancyName", tenantName);
             requestBody.put("usernameOrEmailAddress", emailDefault);
             requestBody.put("password", passwordDefault);
 
@@ -145,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
                         public void onResponse(JSONObject response) {
                             //mTextView.setText("Response: " + response.toString());
                             Log.i(TAG, "SUCCESS: " + response);
+
                             respondedParams = response;
                             //startAJob(respondedParams);
                         }
@@ -165,33 +161,12 @@ public class MainActivity extends AppCompatActivity {
             Log.e("ExceptionError", "unexpected JSON exception", e);
             // Do something to recover ... or kill the app.
         }
-        // Request a string response from the provided URL.
-//        stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-//            @Override
-//            public void onResponse(String response) {
-//                //This code is executed if the server responds, whether or not the response contains data.
-//                //The String 'response' contains the server's response.
-//                Log.i(TAG, "SUCCESS: " + response);
-//            }
-//        }, new Response.ErrorListener() { //Create an error listener to handle errors appropriately.
-//            @Override
-//            public void onErrorResponse(VolleyError error) {
-//                //This code is executed if there is an error.
-//                Log.i(TAG, "ERROR: " + error);
-//            }
-//        }) {
-//            protected Map<String, String> getParams() {
-//                Map<String, String> MyData = new HashMap<String, String>();
-//                MyData.put("tenancyName", "supermasil"); //Add the data you'd like to send to the server.
-//                MyData.put("usernameOrEmailAddress", "khoa.hoang@berkeley.edu");
-//                MyData.put("password", "82184756Abc");
-//                return MyData;
-//            }
-//        };
+
     }
 
     private void startAJob(JSONObject respondedParams) {
         try {
+            // The key got back from the server
             resultKey = respondedParams.getString("result");
         } catch (JSONException e) {
             Log.e("ExceptionError", "unexpected JSON exception", e);
@@ -203,7 +178,11 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             System.out.println(emailInput.getText().toString());
+
+            // 2 arguments to the flowchart
             inputArguments.put("email", emailInput.getText().toString());
+            inputArguments.put("userClassChoice", userClassChoice);
+
             innerRequestBody.put("ReleaseKey", releaseKey);
             innerRequestBody.put("Strategy", "All");
             innerRequestBody.put("RobotIds",new JSONArray());
@@ -217,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         //mTextView.setText("Response: " + response.toString());
-                        Log.i(TAG, "SUCCESS: " + response);
+                        Log.i(TAG, "START JOB SUCCESSFULLY: " + response);
                     }
                 }, new Response.ErrorListener() {
 
