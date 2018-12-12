@@ -1,4 +1,10 @@
-# Automate-Chill
+# TheLazyApp
+The Robotic Process Automation (RPA) app that won UiPath's RPA challenge at Cal Hacks 5.0 (November 2-4 2018 at UC Berkeley)
+
+VERSION 2.0
+Updates:
+- The process is modularized to different process: DataScraping, Zipping, Google Drive and Email
+- To add a different class, just need to add the data scraping process and everything else is taken care of.
 
 [![IMAGE ALT TEXT HERE](./logo.png)]
 The Lazy App (as in Lazy Evaluation, just nerdy stuff).
