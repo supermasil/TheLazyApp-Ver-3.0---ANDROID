@@ -1,5 +1,17 @@
 Turn off your anti-virus to enable the email sending feature
 
+Credentials:
+
+ String usernameKhoa = "supermasil";
+    String emailKhoa = "khoa.hoang@berkeley.edu";
+    String userNameJessie = "JessieGross";
+    String JessieEmail = "jvgross@berkeley.edu";
+
+    String tenantName = userNameJessie;
+    String emailDefault = "automateandchill@gmail.com";
+    String passwordDefault = "Automate&chill1";
+
+
 TenantName = "JessieGross"
 emailDefault = "automateandchill@gmail.com";
 passwordDefault = "Automate&chill1";
