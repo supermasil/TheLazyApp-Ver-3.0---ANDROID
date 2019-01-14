@@ -1,10 +1,12 @@
 <resources>
     <string name="app_name">Automate&amp;Chill</string>
     <string name="go">Let\'s download \'em files!</string>
+    <string name="email">Please enter your email</string>
     <string name="stop">Stop</string>
     <string name="title">The Lazy App</string>
     <string name="slogan">The laziness at your fingertip</string>
-    <string name="email">Please enter your email...</string>
+    <string name="edtiLink">You can edit this</string>
+
 
     <string-array name="classNames">
         <item>CS61A</item>
